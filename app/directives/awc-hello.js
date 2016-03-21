@@ -1,7 +1,7 @@
 export default ngModule => {
     
     if (ON_TEST) {
-        require('./awc-hello.test')(ngModule);
+        require('./awc-hello.test').default(ngModule);
     }
     
     ngModule.directive('awcHello', () => {

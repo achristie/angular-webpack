@@ -3,7 +3,7 @@ export default ngModule => {
         beforeEach(window.module(ngModule.name));
         
         it('should test properly', () => {
-            expect(false).to.be.true;
+            expect(true).to.be.true;
         });
     });
 };

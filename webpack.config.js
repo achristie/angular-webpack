@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+//console.log(process.env.NODE_ENV);
 
 module.exports = {
     context: path.join(__dirname + '/app'),
@@ -10,7 +11,7 @@ module.exports = {
     },
     plugins: [
         new webpack.DefinePlugin({
-            ON_TEST: process.env.NODE_ENV === 'test'
+            ON_TEST: process.env.NODE_ENV === 'development'
         })
     ],
     module: {
