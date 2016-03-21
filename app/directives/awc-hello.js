@@ -4,7 +4,7 @@ export default ngModule => {
         require('./awc-hello.test').default(ngModule);
     }
     
-    ngModule.directive('awcHello', () => {
+    ngModule.directive('awcHello', ($log) => {
         require('./awc-hello.styl');
         return {
             restrict: 'E',
@@ -15,6 +15,8 @@ export default ngModule => {
                 const vm = this;
                 
                 vm.greeting = 'Hello Webpack';
+                
+                $log.info('i have info..');
             }
         };
     });

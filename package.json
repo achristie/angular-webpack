@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "webpack-dev-server --content-base app --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "set NODE_ENV=development&& karma start",
+    "build": "set NODE_ENV=production&& webpack&& copy app\\index.html dist\\index.html"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,7 @@
     "karma-mocha": "^0.2.2",
     "karma-webpack": "^1.7.0",
     "mocha": "^2.4.5",
+    "ng-annotate-loader": "^0.1.0",
     "raw-loader": "^0.5.1",
     "style-loader": "^0.13.0",
     "stylus-loader": "^1.5.1",
